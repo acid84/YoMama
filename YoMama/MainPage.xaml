@@ -1,0 +1,110 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="YoMama.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:toolkitPrimitives="clr-namespace:Microsoft.Phone.Controls.Primitives;assembly=Microsoft.Phone.Controls.Toolkit"
+	mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+        <Style TargetType="toolkitPrimitives:LoopingSelectorItem">
+            <Setter Property="Foreground" Value="{StaticResource PhoneSubtleBrush}"/>
+            <Setter Property="Padding" Value="6"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border x:Name="root" CacheMode="BitmapCache" Background="Transparent" Padding="{TemplateBinding Padding}">
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition From="Normal" To="Expanded" GeneratedDuration="0:0:0.33" />
+                                        <VisualTransition From="Expanded" To="Normal" GeneratedDuration="0:0:0.33" />
+                                    </VisualStateGroup.Transitions>
+
+                                    <VisualState x:Name="Normal" />
+
+                                    <VisualState x:Name="Expanded">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" To="0.8" Duration="0"/>
+                                        </Storyboard>
+                                    </VisualState>
+
+                                    <VisualState x:Name="Selected">
+                                        <Storyboard>
+                                            <!--<DoubleAnimation Storyboard.TargetName="background" Storyboard.TargetProperty="Opacity" To="1" Duration="0"/>-->
+                                            <!--<DoubleAnimation Storyboard.TargetName="Text" Storyboard.TargetProperty="FontSize" To="21" Duration="0:0:05"/>-->
+                                            <DoubleAnimation Storyboard.TargetName="Text" Storyboard.TargetProperty="Opacity" To="1" Duration="0"/>
+                                            <DoubleAnimation Storyboard.TargetName="border" Storyboard.TargetProperty="Opacity" To="1" Duration="0"/>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="BorderBrush" Duration="0">
+                                                <ObjectAnimationUsingKeyFrames.KeyFrames>
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="DarkGray" />
+                                                </ObjectAnimationUsingKeyFrames.KeyFrames>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="contentControl" Storyboard.TargetProperty="Foreground" Duration="0">
+                                                <ObjectAnimationUsingKeyFrames.KeyFrames>
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                </ObjectAnimationUsingKeyFrames.KeyFrames>
+                                            </ObjectAnimationUsingKeyFrames>
+
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="contentControl" Storyboard.TargetProperty="FontWeight" Duration="0">
+                                                <ObjectAnimationUsingKeyFrames.KeyFrames>
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="Bold" />
+                                                </ObjectAnimationUsingKeyFrames.KeyFrames>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+                            <Border.RenderTransform>
+                                <TranslateTransform x:Name="Transform"/>
+                            </Border.RenderTransform>
+
+                            <Grid>
+                                <Rectangle x:Name="background" Margin="0" Opacity="0" Fill="{StaticResource PhoneAccentBrush}" CacheMode="BitmapCache"/>
+
+                                <Border x:Name="border" Opacity="0" BorderThickness="0" BorderBrush="{StaticResource PhoneSubtleBrush}">
+                                    <ContentControl x:Name="contentControl" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch">
+                                        <TextBlock x:Name="Text" TextWrapping="Wrap" Opacity="0.7" Text="{Binding Text}" Foreground="{StaticResource PhoneForegroundBrush}" />
+                                    </ContentControl>
+                                </Border>
+                            </Grid>
+
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </phone:PhoneApplicationPage.Resources>
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		
+		<toolkitPrimitives:LoopingSelector x:Name="LoopingSelector" ItemSize="400,100" ItemMargin="10" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+	</Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar>
+			<shell:ApplicationBarIconButton IconUri="/Assets/AppBar/SMS2.png" Click="SendSmsOnClick" Text="Send SMS"/>
+            <!--<shell:ApplicationBarIconButton IconUri="/Assets/AppBar/SMS2.png" Click="RandomJokeOnClick" Text="Random joke"/>-->
+
+            <shell:ApplicationBar.MenuItems>
+				<shell:ApplicationBarMenuItem Text="Feedback" Click="FeedbackOnClick" />
+                <shell:ApplicationBarMenuItem Text="Rate this app" Click="ReviewOnClick" />
+            </shell:ApplicationBar.MenuItems>
+
+		</shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

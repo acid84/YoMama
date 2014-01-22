@@ -1,0 +1,16 @@
+﻿<xapCache source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Bin\Release\YoMama.ChuckNorris_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="2014-01-22 21:30:23">
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\obj\Release\YoMama.ChuckNorris.dll" archivePath="YoMama.ChuckNorris.dll" lastWriteTime="2014-01-22 21:30:16" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="2014-01-04 12:00:53" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Assets\AppBar\SMS2.png" archivePath="Assets\AppBar\SMS2.png" lastWriteTime="2014-01-04 12:00:53" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="2014-01-04 12:00:56" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="2014-01-04 12:00:56" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="2014-01-04 12:00:56" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="2014-01-04 12:00:56" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Jokes.txt" archivePath="Jokes.txt" lastWriteTime="2014-01-04 11:20:27" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="2014-01-04 11:40:58" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Bin\Release\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="2014-01-04 12:00:53" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="2014-01-04 12:00:56" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\Common\Bin\Release\Common.dll" archivePath="Common.dll" lastWriteTime="2014-01-22 21:28:12" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="2013-12-12 19:43:24" />
+  <file source="\\n00b\internal\Micke\Kod\YoMama\YoMama.ChuckNorris\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2014-01-04 11:40:59" />
+</xapCache>
